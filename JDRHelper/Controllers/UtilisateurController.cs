@@ -64,12 +64,13 @@ namespace JDRHelper.Controllers
 
             B_Role_Utilisateur role_Utilisateur = new B_Role_Utilisateur();
 
-
-
             role_Utilisateur.Id_Role = 2;
             role_Utilisateur.Id_Utilisateur = us.Insert(entity).Id;
 
             brs.Insert(role_Utilisateur);
+
+            //H_Utilisateur user = us.Get(role_Utilisateur.Id_Utilisateur);
+            //string roles = user.Role;
 
             return RedirectToAction("Connection");
         }

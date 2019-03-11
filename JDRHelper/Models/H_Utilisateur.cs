@@ -1,4 +1,6 @@
-﻿using System;
+﻿using JDRBusiness.Services;
+using JDRHelper.Infrastructure;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -10,6 +12,9 @@ namespace JDRHelper.Models
 {
     public class H_Utilisateur
     {
+        B_RolesService rs = new B_RolesService();
+        B_Role_UtilisateurService rus = new B_Role_UtilisateurService();
+
         private int _Id;
         private string _Nom;
         private string _Prenom;
@@ -63,7 +68,7 @@ namespace JDRHelper.Models
 
         public string Role
         {
-            get { return _Role; }
+            get { return _Role = rs.Get().Where(r=> r.Id == (rus.Get().Where(u => u.Id_Utilisateur == Id).Select(ro => ro.Id_Role).FirstOrDefault())).Select(r => r.Nom).FirstOrDefault(); }
             set { _Role = value; }
         }
 
