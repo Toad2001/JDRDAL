@@ -1,0 +1,14 @@
+﻿CREATE TABLE [dbo].[PNJ]
+(
+	[Id] INT NOT NULL identity PRIMARY KEY, 
+    [Sexe] BIT NOT NULL, 
+    [Id_Race] INT NULL, 
+	[Id_Ame] INT NOT NULL DEFAULT 5, 
+    [Id_Rang] INT NOT NULL, 
+    [Id_ClassePNJ] INT NOT NULL, 
+    CONSTRAINT [FK_PNJ_Race] FOREIGN KEY (Id_Race) REFERENCES Race(Id), 
+    CONSTRAINT [FK_PNJ_Ame] FOREIGN KEY (Id_Ame) REFERENCES Ame(Id), 
+    CONSTRAINT [FK_PNJ_Rang] FOREIGN KEY (Id_Rang) REFERENCES Rang(Id), 
+    CONSTRAINT [FK_PNJ_ClassePNJ] FOREIGN KEY (Id_ClassePNJ) REFERENCES ClassePNJ(Id), 
+
+)

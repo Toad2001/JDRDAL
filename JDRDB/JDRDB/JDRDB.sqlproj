@@ -1,0 +1,187 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <Name>JDRDB</Name>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectVersion>4.1</ProjectVersion>
+    <ProjectGuid>{0ac858d9-0883-417d-8e1b-da6190c25493}</ProjectGuid>
+    <DSP>Microsoft.Data.Tools.Schema.Sql.Sql120DatabaseSchemaProvider</DSP>
+    <OutputType>Database</OutputType>
+    <RootPath>
+    </RootPath>
+    <RootNamespace>JDRDB</RootNamespace>
+    <AssemblyName>JDRDB</AssemblyName>
+    <ModelCollation>1033, CI</ModelCollation>
+    <DefaultFileStructure>BySchemaAndSchemaType</DefaultFileStructure>
+    <DeployToDatabase>True</DeployToDatabase>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <TargetLanguage>CS</TargetLanguage>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <SqlServerVerification>False</SqlServerVerification>
+    <IncludeCompositeObjects>True</IncludeCompositeObjects>
+    <TargetDatabaseSet>True</TargetDatabaseSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">11.0</VisualStudioVersion>
+    <!-- Default to the v11.0 targets path if the targets file for the current VS version is not found -->
+    <SSDTExists Condition="Exists('$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets')">True</SSDTExists>
+    <VisualStudioVersion Condition="'$(SSDTExists)' == ''">11.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Condition="'$(SQLDBExtensionsRefPath)' != ''" Project="$(SQLDBExtensionsRefPath)\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <Import Condition="'$(SQLDBExtensionsRefPath)' == ''" Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <ItemGroup>
+    <Folder Include="Properties" />
+    <Folder Include="Tables" />
+    <Folder Include="Tables\Lieu" />
+    <Folder Include="Tables\PNJ" />
+    <Folder Include="Tables\PJ" />
+    <Folder Include="Tables\Materiel" />
+    <Folder Include="Tables\Monstres" />
+    <Folder Include="Tables\Race" />
+    <Folder Include="Tables\Magie" />
+    <Folder Include="Tables\Stat" />
+    <Folder Include="Scriptes" />
+    <Folder Include="Procedures" />
+    <Folder Include="Procedures\Tables" />
+    <Folder Include="Procedures\Tables\Supprimer" />
+    <Folder Include="Procedures\Tables\Modifier" />
+    <Folder Include="Procedures\Tables\Ajouter" />
+    <Folder Include="Procedures\SacPJ" />
+    <Folder Include="Procedures\SacPJ\Ajouter" />
+    <Folder Include="Procedures\SacPJ\Supprimer" />
+    <Folder Include="Tables\Utilisateur" />
+  </ItemGroup>
+  <ItemGroup>
+    <Build Include="Tables\Lieu\Lieu.sql" />
+    <Build Include="Tables\Lieu\Province.sql" />
+    <Build Include="Tables\Monstres\Capacite.sql" />
+    <Build Include="Tables\Monstres\Lieu-Monstre.sql" />
+    <Build Include="Tables\Monstres\Monstre.sql" />
+    <Build Include="Tables\Monstres\Resistence.sql" />
+    <Build Include="Tables\PNJ\PNJ.sql" />
+    <Build Include="Tables\Race\Race.sql" />
+    <Build Include="Tables\PJ\Classe.sql" />
+    <Build Include="Tables\PJ\Talent.sql" />
+    <Build Include="Tables\PJ\Signe.sql" />
+    <Build Include="Tables\Materiel\Matiere.sql" />
+    <Build Include="Tables\PJ\ConditionTalent.sql" />
+    <Build Include="Tables\Materiel\Arme.sql" />
+    <Build Include="Tables\Materiel\Enchantement.sql" />
+    <Build Include="Tables\Materiel\Armure.sql" />
+    <Build Include="Tables\Materiel\Objet.sql" />
+    <Build Include="Tables\Materiel\Style.sql" />
+    <Build Include="Tables\Magie\Magie.sql" />
+    <Build Include="Tables\PJ\PJ.sql" />
+    <Build Include="Tables\PJ\PJ-Equipement.sql" />
+    <Build Include="Tables\PJ\PJ-Magie.sql" />
+    <Build Include="Tables\PJ\PJ-Objet.sql" />
+    <Build Include="Tables\PJ\PJ-Talent.sql" />
+    <Build Include="Tables\PNJ\PNJ-Equipement.sql" />
+    <Build Include="Tables\PNJ\PNJ-Magie.sql" />
+    <Build Include="Tables\Materiel\Style-Arme.sql" />
+    <Build Include="Tables\Materiel\Style-Armure.sql" />
+    <Build Include="Tables\PJ\Classe-Stat.sql" />
+    <Build Include="Tables\Stat\ClasseStat.sql" />
+    <Build Include="Tables\Stat\Stat.sql" />
+    <Build Include="Tables\PJ\PJ-Stat.sql" />
+    <Build Include="Tables\Race\Race-Stat.sql" />
+    <Build Include="Tables\Monstres\Province-Monstre.sql" />
+    <Build Include="Tables\Magie\Ame.sql" />
+    <Build Include="Tables\Monstres\Objet-Monstre.sql" />
+    <Build Include="Tables\Stat\Rang.sql" />
+    <Build Include="Tables\Materiel\TypeArme.sql" />
+    <Build Include="Tables\Materiel\Arme-Stat.sql" />
+    <Build Include="Tables\Materiel\Armure-Stat.sql" />
+    <Build Include="Tables\Magie\Magie-Stat.sql" />
+    <Build Include="Tables\Magie\EcoleMagie.sql" />
+    <Build Include="Tables\Magie\RangMagie.sql" />
+    <Build Include="Tables\Materiel\Enchantement-Stat.sql" />
+    <Build Include="Tables\Materiel\Matiere-Stat.sql" />
+    <Build Include="Tables\Monstres\Monstre-Stat.sql" />
+    <Build Include="Tables\PNJ\PNJ-Stat.sql" />
+    <Build Include="Tables\PNJ\ClassePNJ.sql" />
+    <Build Include="Tables\Materiel\Equipement.sql" />
+    <Build Include="Procedures\Tables\Supprimer\SupprimerArme.sql" />
+    <Build Include="Procedures\Tables\Supprimer\SupprimerArmure.sql" />
+    <Build Include="Procedures\Tables\Supprimer\SupprimerClasse.sql" />
+    <Build Include="Procedures\Tables\Supprimer\SupprimerEnchantement.sql" />
+    <Build Include="Procedures\Tables\Supprimer\SupprimerEquipement.sql" />
+    <Build Include="Procedures\Tables\Supprimer\SupprimerMagie.sql" />
+    <Build Include="Procedures\Tables\Supprimer\SupprimerMonstre.sql" />
+    <Build Include="Procedures\Tables\Supprimer\SupprimerObjet.sql" />
+    <Build Include="Procedures\Tables\Supprimer\SupprimerPJ.sql" />
+    <Build Include="Procedures\Tables\Supprimer\SupprimerPNJ.sql" />
+    <Build Include="Procedures\Tables\Supprimer\SupprimerStyle.sql" />
+    <Build Include="Procedures\Tables\Modifier\ModifierArme.sql" />
+    <Build Include="Procedures\Tables\Modifier\ModifierArmure.sql" />
+    <Build Include="Procedures\Tables\Modifier\ModifierClasse.sql" />
+    <Build Include="Procedures\Tables\Modifier\ModifierEnchantement.sql" />
+    <Build Include="Procedures\Tables\Modifier\ModifierEquipement.sql" />
+    <Build Include="Procedures\Tables\Modifier\ModifierMagie.sql" />
+    <Build Include="Procedures\Tables\Modifier\ModifierMonstre.sql" />
+    <Build Include="Procedures\Tables\Modifier\ModifierObjet.sql" />
+    <Build Include="Procedures\Tables\Modifier\ModifierPJ.sql" />
+    <Build Include="Procedures\Tables\Modifier\ModifierPNJ.sql" />
+    <Build Include="Procedures\Tables\Modifier\ModifierStyle.sql" />
+    <Build Include="Procedures\Tables\Ajouter\AjouterArme.sql" />
+    <Build Include="Procedures\Tables\Ajouter\AjouterArmure.sql" />
+    <Build Include="Procedures\Tables\Ajouter\AjouterClasse.sql" />
+    <Build Include="Procedures\Tables\Ajouter\AjouterEnchantement.sql" />
+    <Build Include="Procedures\Tables\Ajouter\AjouterEquipement.sql" />
+    <Build Include="Procedures\Tables\Ajouter\AjouterMagie.sql" />
+    <Build Include="Procedures\Tables\Ajouter\AjouterMonstre.sql" />
+    <Build Include="Procedures\Tables\Ajouter\AjouterObjet.sql" />
+    <Build Include="Procedures\Tables\Ajouter\AjouterPJ.sql" />
+    <Build Include="Procedures\Tables\Ajouter\AjouterPNJ.sql" />
+    <Build Include="Procedures\Tables\Ajouter\AjouterStyle.sql" />
+    <Build Include="Procedures\Tables\Ajouter\AjouterMatiere.sql" />
+    <Build Include="Procedures\Tables\Ajouter\AjouterRace.sql" />
+    <Build Include="Procedures\SacPJ\Ajouter\AjouterObjetPJ.sql" />
+    <Build Include="Procedures\SacPJ\Ajouter\AjouterEquipementPJ.sql" />
+    <Build Include="Procedures\SacPJ\Ajouter\AjouterMagiePJ.sql" />
+    <Build Include="Procedures\SacPJ\Ajouter\AjouterTalentPJ.sql" />
+    <Build Include="Procedures\SacPJ\Supprimer\SupprimerObjetPJ.sql" />
+    <Build Include="Procedures\SacPJ\Supprimer\SupprimerEquipementPJ.sql" />
+    <Build Include="Procedures\SelectStat.sql" />
+    <Build Include="Procedures\Tables\Ajouter\AjouterUtilisateur.sql" />
+    <Build Include="Procedures\Tables\Modifier\ModifierUtilisateur.sql" />
+    <Build Include="Procedures\Tables\Supprimer\SupprimerUtilisateur.sql" />
+    <Build Include="Tables\Utilisateur\Role_Utilisateur.sql" />
+    <Build Include="Tables\Utilisateur\Roles.sql" />
+    <Build Include="Tables\Utilisateur\Utilisateur.sql" />
+    <Build Include="Tables\Utilisateur\PJ_User.sql" />
+    <Build Include="Procedures\SelectStatDetail.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <RefactorLog Include="JDRDB.refactorlog" />
+  </ItemGroup>
+  <ItemGroup>
+    <PostDeploy Include="Scriptes\LoadData.sql" />
+  </ItemGroup>
+</Project>

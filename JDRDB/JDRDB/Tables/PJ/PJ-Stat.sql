@@ -1,0 +1,9 @@
+﻿CREATE TABLE [dbo].[PJ-Stat]
+(
+	[Id] INT NOT NULL identity PRIMARY KEY, 
+    [Id_PJ] INT NOT NULL, 
+    [Id_Stat] INT NOT NULL, 
+    [Valeur] INT NOT NULL, 
+    CONSTRAINT [FK_PJ-Stat_PJ] FOREIGN KEY (Id_PJ) REFERENCES PJ(Id), 
+    CONSTRAINT [FK_PJ-Stat_Stat] FOREIGN KEY (Id_Stat) REFERENCES Stat(Id)
+)

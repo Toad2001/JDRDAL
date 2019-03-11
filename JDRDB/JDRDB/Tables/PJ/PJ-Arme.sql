@@ -1,0 +1,7 @@
+﻿CREATE TABLE [dbo].[PJ-Arme]
+(
+    [Id_PJ] INT NOT NULL, 
+    [Id_Arme] INT NOT NULL, 
+    CONSTRAINT [FK_PJ-Arme_PJ] FOREIGN KEY (Id_PJ) REFERENCES PJ(Id), 
+    CONSTRAINT [FK_PJ-Arme_Arme] FOREIGN KEY (Id_Arme) REFERENCES Arme(Id)
+)

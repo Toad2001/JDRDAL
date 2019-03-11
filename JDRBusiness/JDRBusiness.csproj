@@ -1,0 +1,178 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{47978DAB-C9CE-406A-9ABB-752BE8911A64}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>JDRBusiness</RootNamespace>
+    <AssemblyName>JDRBusiness</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.9.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="SendGrid, Version=9.10.0.0, Culture=neutral, PublicKeyToken=4f047e93159395ca, processorArchitecture=MSIL">
+      <HintPath>..\packages\Sendgrid.9.10.0\lib\net452\SendGrid.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Net.Http, Version=4.1.1.2, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Net.Http.4.3.3\lib\net46\System.Net.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Algorithms, Version=4.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Cryptography.Algorithms.4.3.0\lib\net461\System.Security.Cryptography.Algorithms.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Encoding, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Cryptography.Encoding.4.3.0\lib\net46\System.Security.Cryptography.Encoding.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Primitives, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Cryptography.Primitives.4.3.0\lib\net46\System.Security.Cryptography.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.X509Certificates, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Cryptography.X509Certificates.4.3.0\lib\net461\System.Security.Cryptography.X509Certificates.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Class1.cs" />
+    <Compile Include="Mappers\B_Mapper.cs" />
+    <Compile Include="Mappers\DetailsMapper.cs" />
+    <Compile Include="Mappers\EquipementMapper.cs" />
+    <Compile Include="Mappers\MatiereMapper.cs" />
+    <Compile Include="Mappers\PJEquipementMapper.cs" />
+    <Compile Include="Mappers\PJMapper.cs" />
+    <Compile Include="Models\B_Details.cs" />
+    <Compile Include="Models\B_PJ_User.cs" />
+    <Compile Include="Models\B_Roles.cs" />
+    <Compile Include="Models\B_Role_Utilisateur.cs" />
+    <Compile Include="Models\IntermediaireM\B_Arme-Stat.cs" />
+    <Compile Include="Models\IntermediaireM\B_Armure-Stat.cs" />
+    <Compile Include="Models\IntermediaireM\B_Classe-Stat.cs" />
+    <Compile Include="Models\IntermediaireM\B_Enchantement-Stat.cs" />
+    <Compile Include="Models\IntermediaireM\B_Lieu-Monstre.cs" />
+    <Compile Include="Models\IntermediaireM\B_Magie-Stat.cs" />
+    <Compile Include="Models\IntermediaireM\B_Matiere-Stat.cs" />
+    <Compile Include="Models\IntermediaireM\B_Monstre-Stat.cs" />
+    <Compile Include="Models\IntermediaireM\B_Objet-Monstre.cs" />
+    <Compile Include="Models\IntermediaireM\B_Province-Monstre.cs" />
+    <Compile Include="Models\IntermediaireM\B_Race-Stat.cs" />
+    <Compile Include="Models\IntermediaireM\B_Style-Arme.cs" />
+    <Compile Include="Models\IntermediaireM\B_Style-Armure.cs" />
+    <Compile Include="Models\IntermediaireM\PJ\B_PJ-Equipement.cs" />
+    <Compile Include="Models\IntermediaireM\PJ\B_PJ-Magie.cs" />
+    <Compile Include="Models\IntermediaireM\PJ\B_PJ-Objet.cs" />
+    <Compile Include="Models\IntermediaireM\PJ\B_PJ-Stat.cs" />
+    <Compile Include="Models\IntermediaireM\PJ\B_PJ-Talent.cs" />
+    <Compile Include="Models\IntermediaireM\PNJ\B_PNJ-Equipement.cs" />
+    <Compile Include="Models\IntermediaireM\PNJ\B_PNJ-Magie.cs" />
+    <Compile Include="Models\IntermediaireM\PNJ\B_PNJ-Stat.cs" />
+    <Compile Include="Models\LieuProvinceM\B_Lieu.cs" />
+    <Compile Include="Models\LieuProvinceM\B_Province.cs" />
+    <Compile Include="Models\MagieM\B_Ame.cs" />
+    <Compile Include="Models\MagieM\B_EcoleMagie.cs" />
+    <Compile Include="Models\MagieM\B_Magie.cs" />
+    <Compile Include="Models\MagieM\B_RangMagie.cs" />
+    <Compile Include="Models\Monstre\B_Capacite.cs" />
+    <Compile Include="Models\Monstre\B_Monstre.cs" />
+    <Compile Include="Models\Monstre\B_Resistence.cs" />
+    <Compile Include="Models\ObjetM\B_Arme.cs" />
+    <Compile Include="Models\ObjetM\B_Armure.cs" />
+    <Compile Include="Models\ObjetM\B_Enchantement.cs" />
+    <Compile Include="Models\ObjetM\B_Equipement.cs" />
+    <Compile Include="Models\ObjetM\B_Matiere.cs" />
+    <Compile Include="Models\ObjetM\B_Objet.cs" />
+    <Compile Include="Models\ObjetM\B_Style.cs" />
+    <Compile Include="Models\ObjetM\B_TypeArme.cs" />
+    <Compile Include="Models\PjM\B_Classe.cs" />
+    <Compile Include="Models\PjM\B_ConditionTalent.cs" />
+    <Compile Include="Models\PjM\B_PJ.cs" />
+    <Compile Include="Models\PjM\B_PJDetails.cs" />
+    <Compile Include="Models\PjM\B_Race.cs" />
+    <Compile Include="Models\PjM\B_Signe.cs" />
+    <Compile Include="Models\PjM\B_Talent.cs" />
+    <Compile Include="Models\PNJM\B_ClassePNJ.cs" />
+    <Compile Include="Models\PNJM\B_PNJ.cs" />
+    <Compile Include="Models\StatM\B_ClasseStat.cs" />
+    <Compile Include="Models\StatM\B_Rang.cs" />
+    <Compile Include="Models\StatM\B_Stat.cs" />
+    <Compile Include="Models\B_Utilisateur.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\B_PJDetailsService.cs" />
+    <Compile Include="Services\B_PJ_UserService.cs" />
+    <Compile Include="Services\B_RolesService.cs" />
+    <Compile Include="Services\B_Role_UtilisateurService.cs" />
+    <Compile Include="Services\B_UtilisateurService.cs" />
+    <Compile Include="Services\IntermediaireS\B_PJ_EquipementService.cs" />
+    <Compile Include="Services\LieuProvinceS\B_LieuService.cs" />
+    <Compile Include="Services\LieuProvinceS\B_ProvinceService.cs" />
+    <Compile Include="Services\MagieS\B_AmeService.cs" />
+    <Compile Include="Services\MagieS\B_EcoleMagieService.cs" />
+    <Compile Include="Services\MagieS\B_MagieService.cs" />
+    <Compile Include="Services\MagieS\B_RangMagieService.cs" />
+    <Compile Include="Services\MonstreS\B_CapaciteService.cs" />
+    <Compile Include="Services\MonstreS\B_MonstreService.cs" />
+    <Compile Include="Services\MonstreS\B_ResistenceService.cs" />
+    <Compile Include="Services\ObjetS\B_ArmeService.cs" />
+    <Compile Include="Services\ObjetS\B_ArmureService.cs" />
+    <Compile Include="Services\ObjetS\B_EnchantementService.cs" />
+    <Compile Include="Services\ObjetS\B_EquipementService.cs" />
+    <Compile Include="Services\ObjetS\B_MatiereService.cs" />
+    <Compile Include="Services\ObjetS\B_ObjetService.cs" />
+    <Compile Include="Services\ObjetS\B_StyleService.cs" />
+    <Compile Include="Services\ObjetS\B_TypeArmeService.cs" />
+    <Compile Include="Services\PJS\B_ClasseService.cs" />
+    <Compile Include="Services\PJS\B_ConditionTalentService.cs" />
+    <Compile Include="Services\PJS\B_PJService.cs" />
+    <Compile Include="Services\PJS\B_RaceService.cs" />
+    <Compile Include="Services\PJS\B_SigneService.cs" />
+    <Compile Include="Services\PJS\B_TalentService.cs" />
+    <Compile Include="Services\PNJS\B_ClassePNJService.cs" />
+    <Compile Include="Services\PNJS\B_PNJService.cs" />
+    <Compile Include="Services\StatS\B_ClasseStatService.cs" />
+    <Compile Include="Services\StatS\B_RangService.cs" />
+    <Compile Include="Services\StatS\B_StatService.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\JDRDAL\JDRDAL.csproj">
+      <Project>{B738FA78-2B2A-4036-9D28-56A94C688EBD}</Project>
+      <Name>JDRDAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ToolBox\ToolBox.csproj">
+      <Project>{62BE216C-EF8E-4EA5-A007-A003EF1370C9}</Project>
+      <Name>ToolBox</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

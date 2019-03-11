@@ -1,0 +1,9 @@
+﻿CREATE TABLE [dbo].[ClassePNJ]
+(
+	[Id] INT NOT NULL identity PRIMARY KEY, 
+    [Nom] NVARCHAR(50) NOT NULL,
+	[Id_Rang] INT NOT NULL, 
+	CONSTRAINT [FK_PNJ_Rang] FOREIGN KEY (Id_Rang) REFERENCES Rang(Id), 
+
+
+)

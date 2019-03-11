@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{530F4BDE-C9F9-4058-8753-A99083827C9B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>JDRDAL</RootNamespace>
+    <AssemblyName>JDRDAL</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Models\Magie\Ame.cs" />
+    <Compile Include="Models\Objet\Arme.cs" />
+    <Compile Include="Models\Objet\Armure.cs" />
+    <Compile Include="Models\Monstre\Capacite.cs" />
+    <Compile Include="Models\Pj\Classe.cs" />
+    <Compile Include="Models\PNJ\ClassePNJ.cs" />
+    <Compile Include="Models\Pj\ConditionTalent.cs" />
+    <Compile Include="Models\Magie\EcoleMagie.cs" />
+    <Compile Include="Models\Objet\Enchantement.cs" />
+    <Compile Include="Models\Intermediaire\Arme-Stat.cs" />
+    <Compile Include="Models\Intermediaire\Armure-Stat.cs" />
+    <Compile Include="Models\Intermediaire\Classe-Stat.cs" />
+    <Compile Include="Models\Stat\ClasseStat.cs" />
+    <Compile Include="Models\Intermediaire\Enchantement-Stat.cs" />
+    <Compile Include="Models\Intermediaire\Lieu-Monstre.cs" />
+    <Compile Include="Models\Intermediaire\Magie-Stat.cs" />
+    <Compile Include="Models\Intermediaire\Matiere-Stat.cs" />
+    <Compile Include="Models\Intermediaire\Monstre-Stat.cs" />
+    <Compile Include="Models\Intermediaire\Objet-Monstre.cs" />
+    <Compile Include="Models\Intermediaire\PJ\PJ-Arme.cs" />
+    <Compile Include="Models\Intermediaire\PJ\PJ-Armure.cs" />
+    <Compile Include="Models\Intermediaire\PJ\PJ-Magie.cs" />
+    <Compile Include="Models\Intermediaire\PJ\PJ-Objet.cs" />
+    <Compile Include="Models\Intermediaire\PJ\PJ-Stat.cs" />
+    <Compile Include="Models\Intermediaire\PJ\PJ-Talent.cs" />
+    <Compile Include="Models\Intermediaire\PNJ\PNJ-Arme.cs" />
+    <Compile Include="Models\Intermediaire\PNJ\PNJ-Armure.cs" />
+    <Compile Include="Models\Intermediaire\PNJ\PNJ-Magie.cs" />
+    <Compile Include="Models\Intermediaire\PNJ\PNJ-Stat.cs" />
+    <Compile Include="Models\Intermediaire\Province-Monstre.cs" />
+    <Compile Include="Models\Intermediaire\Race-Stat.cs" />
+    <Compile Include="Models\Intermediaire\Style-Arme.cs" />
+    <Compile Include="Models\Intermediaire\Style-Armure.cs" />
+    <Compile Include="Models\LieuProvince\Lieu.cs" />
+    <Compile Include="Models\Magie\Magie.cs" />
+    <Compile Include="Models\Objet\Matiere.cs" />
+    <Compile Include="Models\Monstre\Monstre.cs" />
+    <Compile Include="Models\Objet\Objet.cs" />
+    <Compile Include="Models\Pj\PJ.cs" />
+    <Compile Include="Models\PNJ\PNJ.cs" />
+    <Compile Include="Models\LieuProvince\Province.cs" />
+    <Compile Include="Models\Race.cs" />
+    <Compile Include="Models\Stat\Rang.cs" />
+    <Compile Include="Models\Magie\RangMagie.cs" />
+    <Compile Include="Models\Monstre\Resistence.cs" />
+    <Compile Include="Models\Pj\Signe.cs" />
+    <Compile Include="Models\Stat\Stat.cs" />
+    <Compile Include="Models\Objet\Style.cs" />
+    <Compile Include="Models\Pj\Talent.cs" />
+    <Compile Include="Models\Objet\TypeArme.cs" />
+    <Compile Include="Models\Objet\TypeArmure.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Controllers\" />
+    <Folder Include="Repositories\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
