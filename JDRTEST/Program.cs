@@ -27,6 +27,8 @@ namespace JDRTEST
                 Console.WriteLine("{0}{1}",item.Nom, item.Valeur);
             }
             Console.ReadLine();
+
+            Console.WriteLine("test");
         }
     }
 }
