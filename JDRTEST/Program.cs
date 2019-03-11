@@ -28,7 +28,7 @@ namespace JDRTEST
             }
             Console.ReadLine();
 
-            //test
+            Console.WriteLine("test");
         }
     }
 }
