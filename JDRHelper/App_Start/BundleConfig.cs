@@ -25,6 +25,11 @@ namespace JDRHelper
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
                       "~/Content/site.css"));
+
+            bundles.Add(new StyleBundle("~/Content/PJ").Include(
+                        "~/Content/PJ.css"));
+            bundles.Add(new ScriptBundle("~/Scripts/Type").Include(
+                        "~/Scripts/Type.js"));
         }
     }
 }
