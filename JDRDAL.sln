@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JDRHelper", "JDRHelper\JDRH
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JDRTEST", "JDRTEST\JDRTEST.csproj", "{F8DB7B9F-44F5-4831-A3D7-E5FD87EDF57F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JDRapi", "JDRapi\JDRapi.csproj", "{B341703B-AE58-4384-B468-23F535D98366}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -47,6 +49,10 @@ Global
 		{F8DB7B9F-44F5-4831-A3D7-E5FD87EDF57F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F8DB7B9F-44F5-4831-A3D7-E5FD87EDF57F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F8DB7B9F-44F5-4831-A3D7-E5FD87EDF57F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B341703B-AE58-4384-B468-23F535D98366}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B341703B-AE58-4384-B468-23F535D98366}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B341703B-AE58-4384-B468-23F535D98366}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B341703B-AE58-4384-B468-23F535D98366}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

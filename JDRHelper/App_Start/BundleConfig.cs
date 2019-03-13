@@ -30,6 +30,9 @@ namespace JDRHelper
                         "~/Content/PJ.css"));
             bundles.Add(new ScriptBundle("~/Scripts/Type").Include(
                         "~/Scripts/Type.js"));
+            bundles.Add(new ScriptBundle("~/Scripts/Recherche").Include(
+            "~/Scripts/Recherche.js"));
+
         }
     }
 }

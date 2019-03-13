@@ -9,6 +9,12 @@
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
+
+<div>
+    <input id="nom" type="text">
+    <button id="btn">Chercher</button>
+</div>
+
 <table class="table">
     <tr>
         <th>
@@ -31,7 +37,7 @@
 
     @foreach (var item in Model)
     {
-        <tr>
+        <tr class="perso">
             <td>
                 @Html.DisplayFor(modelItem => item.Nom)
             </td>
@@ -48,11 +54,16 @@
                 @Html.DisplayFor(modelItem => item.Signe.Nom)
             </td>
             <td>
-                @Html.ActionLink("Edit", "Edit", new { id = item.Id }) 
-                @Html.ActionLink("Details", "Details", new { id = item.Id }) 
+                @Html.ActionLink("Edit", "Edit", new { id = item.Id })
+                @Html.ActionLink("Details", "Details", new { id = item.Id })
                 @Html.ActionLink("Delete", "Delete", new { id = item.Id })
             </td>
         </tr>
     }
 
 </table>
+
+@section div {
+    @Scripts.Render("~/Scripts/Recherche")
+}
+
