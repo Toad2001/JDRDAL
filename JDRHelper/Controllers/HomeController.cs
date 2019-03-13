@@ -1,4 +1,5 @@
 ﻿using JDRHelper.Infrastructure;
+using JDRHelper.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,32 +8,31 @@ using System.Web.Mvc;
 
 namespace JDRHelper.Controllers
 {
+    //[CustomAuth("Admin,User")]
     public class HomeController : Controller
     {
         public ActionResult Index()
         {
-
-
             return View();
         }
 
         public ActionResult About()
         {
-            ViewBag.Message = "Your application description page.";
+            ViewBag.Message = "Description de l'application";
 
             return View();
         }
 
         public ActionResult Contact()
         {
-            ViewBag.Message = "Your contact page.";
+            ViewBag.Message = "Contactez nous";
 
             return View();
         }
 
         public ActionResult Connection()
         {
-            ViewBag.Message = "Your connection page.";
+            ViewBag.Message = "Connection";
 
             return RedirectToAction("Connection","Utilisateur");
         }

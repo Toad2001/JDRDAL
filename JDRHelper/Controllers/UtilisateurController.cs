@@ -23,6 +23,7 @@ namespace JDRHelper.Controllers
         B_Role_UtilisateurService brs = new B_Role_UtilisateurService();
 
         #region Contact
+        //[CustomAuth("Admin,User")]
         [HttpGet]
         public ActionResult Contact()
         {
@@ -31,6 +32,7 @@ namespace JDRHelper.Controllers
             return View(new ContactViewModel());
         }
 
+        //[CustomAuth("Admin,User")]
         [HttpPost]
         public ActionResult Contact(ContactViewModel entity)
         {
@@ -48,12 +50,14 @@ namespace JDRHelper.Controllers
         #endregion
 
         #region Register
+        //[CustomAuth("Admin,User")]
         [HttpGet]
         public ActionResult Register()
         {
             return View(new H_Utilisateur());
         }
 
+        //[CustomAuth("Admin,User")]
         [HttpPost]
         public ActionResult Register(H_Utilisateur entity)
         {
@@ -77,12 +81,14 @@ namespace JDRHelper.Controllers
         #endregion
 
         #region Connection
+        //[CustomAuth("Admin,User")]
         [HttpGet]
         public ActionResult Connection()
         {
             return View(new LoginViewModel());
         }
 
+        //[CustomAuth("Admin,User")]
         [HttpPost]
         public ActionResult Connection(LoginViewModel entity)
         {
@@ -109,6 +115,8 @@ namespace JDRHelper.Controllers
                 return View(utilisateur);
             }
         }
+
+        //[CustomAuth("Admin,User")]
         public ActionResult Logout()
         {
             Session.Abandon();
@@ -116,6 +124,36 @@ namespace JDRHelper.Controllers
         }
         #endregion
 
+        #region MenuDe
+        public ActionResult MenuDe()
+        {
+            return PartialView("MenuDe");
+        }      
+
+        public int LancerDe6()
+        {
+            De de6 = new De(6);
+
+            return de6.Lancer();
+        }
+
+        public int LancerDe20()
+        {
+            De de20 = new De(20);
+
+            return de20.Lancer();
+        }
+
+        public int LancerDe100()
+        {
+            De de100 = new De(100);
+
+            return de100.Lancer();
+        }
+
+        #endregion
+
+        //[CustomAuth("Admin,User")]
         public static bool SendMail(ContactViewModel entity)
         {
             if (String.IsNullOrEmpty(entity.Message))
