@@ -23,9 +23,9 @@
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
                     <li>@Html.ActionLink("Accueil", "Index", "Home", new { area = "" }, null)</li>
-                    <li>@Html.ActionLink("À propos de", "About", "Home", new { area = "" }, null)</li>
+                    <li>@Html.ActionLink("À propos de nous", "About", "Home", new { area = "" }, null)</li>
                     <li>@Html.ActionLink("Contact", "Contact", "Utilisateur", new { area = "" }, null)</li>
-                    <li>@Html.ActionLink("Personnage Joueur", "Index", "PJ")</li>
+                    <li>@Html.ActionLink("Liste de Personnage", "Index", "PJ")</li>
                     @if (JDRHelper.Infrastructure.TheSession.CurrentUser == null)
                     {
                         <li>@Html.ActionLink("Enregistre Toi !!!", "Register", "Utilisateur", new { area = "" }, null)</li>
@@ -60,6 +60,7 @@
 
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
+    @Scripts.Render("~/bundles/De")
     @RenderSection("scripts", required: false)
 </body>
 </html>

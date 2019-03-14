@@ -160,7 +160,6 @@
     <Compile Include="Mappers\H_MatiereMapper.cs" />
     <Compile Include="Mappers\H_PJEquipementMapper.cs" />
     <Compile Include="Mappers\H_PJMapper.cs" />
-    <Compile Include="Models\H_De.cs" />
     <Compile Include="Models\H_Utilisateur.cs" />
     <Compile Include="Models\H_Details.cs" />
     <Compile Include="Models\IntermediaireM\H_Arme-Stat.cs" />
@@ -267,6 +266,7 @@
     <Content Include="Areas\Admin\Views\Shared\_Layout.cshtml" />
     <Content Include="Areas\Admin\Views\Home\Index.cshtml" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
+    <Content Include="Scripts\De.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
     <Content Include="Scripts\jquery-3.3.1.min.js" />
     <Content Include="Scripts\jquery-3.3.1.slim.js" />

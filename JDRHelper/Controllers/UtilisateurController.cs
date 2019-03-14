@@ -128,29 +128,7 @@ namespace JDRHelper.Controllers
         public ActionResult MenuDe()
         {
             return PartialView("MenuDe");
-        }      
-
-        public int LancerDe6()
-        {
-            De de6 = new De(6);
-
-            return de6.Lancer();
         }
-
-        public int LancerDe20()
-        {
-            De de20 = new De(20);
-
-            return de20.Lancer();
-        }
-
-        public int LancerDe100()
-        {
-            De de100 = new De(100);
-
-            return de100.Lancer();
-        }
-
         #endregion
 
         //[CustomAuth("Admin,User")]
