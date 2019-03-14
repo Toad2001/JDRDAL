@@ -1,0 +1,29 @@
+﻿#gen {
+    float: left;
+    width: 33%;
+}
+
+#lvl {
+    float: left;
+    width: 33%;
+}
+
+#carac {
+    float: left;
+    width: 33%;
+}
+
+.guerrier{
+    color : red
+}
+
+.voleur {
+    color: green
+}
+
+.mage {
+    color: blue
+}
+
+
+

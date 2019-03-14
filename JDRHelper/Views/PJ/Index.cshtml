@@ -38,19 +38,19 @@
     @foreach (var item in Model)
     {
         <tr class="perso">
-            <td>
+            <td class="details">
                 @Html.DisplayFor(modelItem => item.Nom)
             </td>
-            <td>
+            <td class="details">
                 @Html.DisplayFor(modelItem => item.SexeNom)
             </td>
-            <td>
+            <td class="details">
                 @Html.DisplayFor(modelItem => item.Race.Nom)
             </td>
-            <td>
+            <td class="details">
                 @Html.DisplayFor(modelItem => item.Classe.Nom)
             </td>
-            <td>
+            <td class="details">
                 @Html.DisplayFor(modelItem => item.Signe.Nom)
             </td>
             <td>
