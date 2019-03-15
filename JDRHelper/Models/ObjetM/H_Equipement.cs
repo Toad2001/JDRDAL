@@ -43,20 +43,17 @@ namespace JDRHelper.Models
             set { _Id_Arme = value; }
         }
 
-
         public H_Arme Arme
         {
             get { return _Arme = _Arme ?? armeService.Get((int)Id_Arme); }
             set { _Arme = value; }
         }
 
-
         public int? Id_Armure
         {
             get { return _Id_Armure; }
             set { _Id_Armure = value; }
         }
-
 
         public H_Armure Armure
         {
@@ -82,20 +79,17 @@ namespace JDRHelper.Models
             set { _Id_Style = value; }
         }
 
-
         public H_Style Style
         {
             get { return _Style = _Style ?? styleService.Get(Id_Style); }
             set { _Style = value; }
         }
 
-
         public int? Id_Enchantement
         {
             get { return _Id_Enchantement; }
             set { _Id_Enchantement = value; }
         }
-
 
         public H_Enchantement Enchantement
         {
@@ -104,7 +98,6 @@ namespace JDRHelper.Models
 
             set { _Enchantement = value; }
         }
-
 
         public Dictionary<string, int> DetailsArme
         {
@@ -118,13 +111,10 @@ namespace JDRHelper.Models
             set { _DetailsArmure = value; }
         }
 
-
-
-
         private Dictionary<string, int> GetDetailsArme()
         {
             Dictionary<string, int> dico = new Dictionary<string, int>();
-
+            
             foreach (H_Details item in Arme.Details)
             {
                 foreach (H_Details itemM in Matiere.Details)
@@ -189,6 +179,5 @@ namespace JDRHelper.Models
             }
             return dico;
         }
-
     }
 }

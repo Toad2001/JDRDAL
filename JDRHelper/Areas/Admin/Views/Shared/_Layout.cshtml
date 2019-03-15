@@ -1,16 +1,15 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - JDR Helper</title>
+    <title>@ViewBag.Title - My ASP.NET Application</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
 </head>
 <body>
     <div class="navbar navbar-inverse navbar-fixed-top">
-        @{ Html.RenderAction("MenuDe", "Utilisateur"); }
+        @{ Html.RenderAction("MenuDe", "Utilisateur", new { area = "" }); }
         <div class="container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -23,14 +22,14 @@
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
                     <li>@Html.ActionLink("Accueil", "Index", "Home", new { area = "" }, null)</li>
-                    <li>@Html.ActionLink("À propos de nous", "About", "Home", new { area = "" }, null)</li>
+                    <li>@Html.ActionLink("À propos de", "About", "Home", new { area = "" }, null)</li>
                     <li>@Html.ActionLink("Contact", "Contact", "Utilisateur", new { area = "" }, null)</li>
-                    <li>@Html.ActionLink("Liste de Personnage", "Index", "PJ")</li>
+                    <li>@Html.ActionLink("Liste de Personnage", "Index", "PJ", new { area = "" }, null)</li>
                     @if (JDRHelper.Infrastructure.TheSession.CurrentUser == null)
                     {
                         <li>@Html.ActionLink("Enregistre Toi !!!", "Register", "Utilisateur", new { area = "" }, null)</li>
                         <li>
-                            <form action="@Url.Action("Connection","Utilisateur")" method="post">
+                            <form action="@Url.Action("Connection","Connection","Utilisateur")" method="post">
                                 <input type="text" name="Email" value="Email" />
                                 <input type="password" name="Password" value="Password" />
                                 <input type="submit" name="Connection" value="Connection" />
@@ -47,21 +46,20 @@
                     }
                 </ul>
             </div>
-
         </div>
     </div>
+
     <div class="container body-content">
         @RenderBody()
         <hr />
-
+        <footer>
+            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+        </footer>
     </div>
 
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
-    @Scripts.Render("~/bundles/De")
+    @Scripts.Render("~/bundles/De")   
     @RenderSection("scripts", required: false)
-    @RenderSection("div", required: false)
-
-
 </body>
 </html>

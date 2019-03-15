@@ -9,8 +9,9 @@ using System.Web;
 using System.Web.Mvc;
 using ToolBox.MappeurGeneric;
 
-namespace JDRHelper.Controllers
+namespace JDRHelper.Areas.Admin.Controllers
 {
+    [CustomAuth("Admin")]
     public class PJ_StatController : Controller
     {
         private H_PJDetailsService pjDetSer = new H_PJDetailsService();

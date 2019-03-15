@@ -7,8 +7,8 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
-namespace JDRHelper.Controllers
-{
+namespace JDRHelper.Areas.Admin.Controllers
+{    
     public class EquipementController : Controller
     {
 
@@ -21,6 +21,7 @@ namespace JDRHelper.Controllers
 
 
         // GET: Equipement
+        [CustomAuth("Admin")]
         public ActionResult Index()
         {
             IEnumerable<H_Equipement> equipements = equipementService.Get().ToList();

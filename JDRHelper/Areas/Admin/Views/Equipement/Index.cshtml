@@ -1,0 +1,154 @@
+﻿@model IEnumerable<JDRHelper.Models.H_Equipement>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Arme)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Matiere)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Style)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Enchantement)
+        </th>
+        <th>
+            Malus
+        </th>
+        <th>
+            Taille
+        </th>
+        <th>
+            Type
+        </th>
+        <th>
+            Degats
+        </th>
+        <th>
+            Encombrement
+        </th>
+        <th>
+            Prix
+        </th>
+
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        if (item.Id_Arme != null)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Arme.Nom)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Matiere.Nom)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Style.Nom)
+                </td>
+                <td>
+                    @if (item.Id_Enchantement != null)
+                    {@Html.DisplayFor(modelItem => item.Enchantement.Nom)}
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Arme.Malus)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Arme.TailleArme)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Arme.Type.Nom)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DetailsArme["Dégats"])
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DetailsArme["Encombrement"])
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DetailsArme["Prix"])
+                </td>
+                <td>
+                    @Html.ActionLink("Details", "DetailsArme", new { id = item.Id })
+                </td>
+            </tr>
+        }
+
+    }
+
+</table>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Armure)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Matiere)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Style)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Enchantement)
+        </th>
+        <th>
+            Protection
+        </th>
+        <th>
+            Encombrement
+        </th>
+        <th>
+            Prix
+        </th>
+
+
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        if (item.Id_Armure != null)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Armure.Nom)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Matiere.Nom)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Style.Nom)
+                </td>
+                <td>
+                    @if (item.Id_Enchantement != null)
+                    {@Html.DisplayFor(modelItem => item.Enchantement.Nom)}
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DetailsArmure["Défense"])
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DetailsArmure["Encombrement"])
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DetailsArmure["Prix"])
+                </td>
+                <td>
+                    @Html.ActionLink("Details", "DetailsArmure", new { id = item.Id })
+                </td>
+            </tr>
+        }
+    }
+</table>

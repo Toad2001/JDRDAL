@@ -6,8 +6,9 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
-namespace JDRHelper.Controllers
+namespace JDRHelper.Areas.Admin.Controllers
 {
+    [CustomAuth("Admin")]
     public class RaceController : Controller
     {
         private H_RaceService raceService = new H_RaceService();

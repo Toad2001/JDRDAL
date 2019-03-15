@@ -32,6 +32,7 @@ namespace JDRHelper.Controllers
 
 
         // GET: PJ
+        //[CustomAuth("Admin,User")]
         public ActionResult Index()
         {
             IEnumerable<H_PJ> pjs = pjService.Get();
@@ -45,6 +46,7 @@ namespace JDRHelper.Controllers
             return View(pjs);
         }
 
+        //[CustomAuth("Admin,User")]
         public ActionResult Details(int id)
         {
             H_PJ h_PJ = pjService.Get(id);
@@ -92,6 +94,7 @@ namespace JDRHelper.Controllers
             return View(h_PJ);
         }
 
+        [CustomAuth("Admin,User")]
         [HttpPost]
         public ActionResult Create(H_PJ item)
         {
@@ -116,18 +119,21 @@ namespace JDRHelper.Controllers
             return RedirectToAction("Index");
         }
 
+        [CustomAuth("Admin,User")]
         [HttpGet]
         public ActionResult Create()
         {
             return View(new H_PJ());
         }
 
+        [CustomAuth("Admin")]
         public ActionResult Delete(int id)
         {
             bool temp = pjService.Delete(id);
             return RedirectToAction("Index");
         }
 
+        [CustomAuth("Admin")]
         [HttpPost]
         public ActionResult Edit(H_PJ item)
         {
@@ -137,6 +143,7 @@ namespace JDRHelper.Controllers
             return RedirectToAction("Index");
         }
 
+        [CustomAuth("Admin")]
         [HttpGet]
         public ActionResult Edit(int id)
         {
@@ -147,6 +154,7 @@ namespace JDRHelper.Controllers
             return View(pj);
         }
 
+        [CustomAuth("Admin,User")]
         [HttpGet]
         public ActionResult Equipe()
         {
