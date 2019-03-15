@@ -7,14 +7,19 @@
     background-size: cover;
 }
 
-.container body-content {
-   
+.jumbotron {
+    /*background-image: url(https://www.logolynx.com/images/logolynx/66/66fa31f7c070324d321aee7b2f0dd7c4.png);*/
+    margin: auto !important;
+    padding: 0 !important;
+    background-color: transparent !important;
+    background-position: top !important;
 }
 
 /* Set padding to keep content from hitting the edges */
 .body-content {
     padding-left: 15px;
     padding-right: 15px;
+        
     
 }
 
