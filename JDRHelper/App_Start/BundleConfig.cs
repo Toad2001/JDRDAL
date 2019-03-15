@@ -34,6 +34,9 @@ namespace JDRHelper
             "~/Scripts/Recherche.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/De").Include("~/Scripts/De.js"));
+
+            bundles.Add(new StyleBundle("~/Content/Place").Include("~/Content/Place.css"));
+
         }
     }
 }

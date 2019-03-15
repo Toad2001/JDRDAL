@@ -46,7 +46,7 @@ namespace JDRHelper.Controllers
             return View(pjs);
         }
 
-        //[CustomAuth("Admin,User")]
+        [CustomAuth("Admin","User")]
         public ActionResult Details(int id)
         {
             H_PJ h_PJ = pjService.Get(id);
@@ -94,7 +94,7 @@ namespace JDRHelper.Controllers
             return View(h_PJ);
         }
 
-        [CustomAuth("Admin,User")]
+        [CustomAuth("Admin","User")]
         [HttpPost]
         public ActionResult Create(H_PJ item)
         {
@@ -119,7 +119,7 @@ namespace JDRHelper.Controllers
             return RedirectToAction("Index");
         }
 
-        [CustomAuth("Admin,User")]
+        [CustomAuth("Admin","User")]
         [HttpGet]
         public ActionResult Create()
         {
@@ -154,7 +154,7 @@ namespace JDRHelper.Controllers
             return View(pj);
         }
 
-        [CustomAuth("Admin,User")]
+        [CustomAuth("Admin","User")]
         [HttpGet]
         public ActionResult Equipe()
         {

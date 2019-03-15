@@ -10,7 +10,6 @@
 </head>
 <body>
     <div class="navbar navbar-inverse navbar-fixed-top">
-        @{ Html.RenderAction("MenuDe", "Utilisateur"); }
         <div class="container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -22,18 +21,18 @@
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Accueil", "Index", "Home", new { area = "" }, null)</li>
-                    <li>@Html.ActionLink("À propos de nous", "About", "Home", new { area = "" }, null)</li>
+                    <li> @{ Html.RenderAction("MenuDe", "Utilisateur"); }</li>       
+                    <li>@Html.ActionLink("Créateurs", "About", "Home", new { area = "" }, null)</li>
                     <li>@Html.ActionLink("Contact", "Contact", "Utilisateur", new { area = "" }, null)</li>
-                    <li>@Html.ActionLink("Liste de Personnage", "Index", "PJ")</li>
+                    <li>@Html.ActionLink("Personnages", "Index", "PJ")</li>
                     @if (JDRHelper.Infrastructure.TheSession.CurrentUser == null)
                     {
-                        <li>@Html.ActionLink("Enregistre Toi !!!", "Register", "Utilisateur", new { area = "" }, null)</li>
+                        <li>@Html.ActionLink("Enregistre toi", "Register", "Utilisateur", new { area = "" }, null)</li>
                         <li>
                             <form action="@Url.Action("Connection","Utilisateur")" method="post">
-                                <input type="text" name="Email" value="Email" />
-                                <input type="password" name="Password" value="Password" />
-                                <input type="submit" name="Connection" value="Connection" />
+                                <input type="text" name="Email" value="Email" class="ajout" />
+                                <input type="password" name="Password" value="Password" class="ajout" id="mdp" />
+                                <input type="submit" name="Connection" value="Connection" class="ajout" />
                             </form>
                         </li>
                     }
@@ -52,13 +51,15 @@
     </div>
     <div class="container body-content">
         @RenderBody()
-        <hr />
+        
 
     </div>
 
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
     @Scripts.Render("~/bundles/De")
+    @Styles.Render("~/Content/Place")
+
     @RenderSection("scripts", required: false)
     @RenderSection("div", required: false)
 

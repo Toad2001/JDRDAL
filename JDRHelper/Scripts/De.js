@@ -1,14 +1,14 @@
 ﻿$(document).ready(function () {
     $('#btn1').click(function () {
-        alert(getRandomInt(6))
+        alert(getRandomInt(6)+1)
     });
 
     $('#btn2').click(function () {
-        alert(getRandomInt(20))
+        alert(getRandomInt(20)+1)
     });
 
     $('#btn3').click(function () {
-        alert(getRandomInt(100))
+        alert(getRandomInt(100)+1)
     });
 });
 
