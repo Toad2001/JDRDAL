@@ -1,5 +1,4 @@
-﻿//using JDRBusiness.Mappers;
-using JDRBusiness.Models;
+﻿using JDRBusiness.Models;
 using JDRDAL.Models;
 using JDRDAL.Repositories.PJR;
 using System;
@@ -31,6 +30,11 @@ namespace JDRBusiness.Services
         public IEnumerable<B_PJ> Get()
         {
             return pJR.Get().Select(pj => Mapper<PJ, B_PJ>.Map(pj));
+        }
+
+        public IEnumerable<B_PJ> GetbyName(string name)
+        {
+            return pJR.GetbyName(name).Select(pj => Mapper<PJ, B_PJ>.Map(pj));
         }
 
         public B_PJ Get(int id)

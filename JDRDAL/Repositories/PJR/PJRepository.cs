@@ -25,8 +25,14 @@ namespace JDRDAL.Repositories.PJR
         {
             Command cmd = new Command("SELECT * FROM PJ WHERE Id =" + id);
             return ServiceLocator.Instance.Connection.ExecuteReader(cmd,pj => pj.ToPJ()).FirstOrDefault();
-        }        
+        }
 
+        public IEnumerable<PJ> GetbyName(string name)
+        {
+            Command cmd = new Command("SELECT * FROM PJ where Nom like '%"+name+"%'");
+
+            return ServiceLocator.Instance.Connection.ExecuteReader(cmd, pj => pj.ToPJ());
+        }
         public PJ Insert(PJ entity)
         {
             Command cmd = new Command("AjouterPJ", true);

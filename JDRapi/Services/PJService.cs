@@ -14,9 +14,9 @@ namespace JDRapi.Services
         B_PJService pJService = new B_PJService();
 
 
-        public IEnumerable<PJ> Get()
+        public IEnumerable<PJ> GetbyName(string name)
         {
-            return pJService.Get().Select(pj => Mapper<B_PJ, PJ>.Map(pj));
+            return pJService.GetbyName(name).Select(pj => Mapper<B_PJ, PJ>.Map(pj));
         }
     }
 }

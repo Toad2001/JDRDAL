@@ -25,9 +25,10 @@ namespace JDRapi.Controllers
 
 
         // GET: api/PJ        
-        public IEnumerable<PJ> Get()
+        [Route("api/pj/byname/name={name}")]
+        public IEnumerable<PJ> GetbyName(string name)
         {
-            IEnumerable<PJ> pjs = apipjService.Get();
+            IEnumerable<PJ> pjs = apipjService.GetbyName(name);
             List<PJ> list = pjs.ToList();
             foreach (PJ item in list)
             {
