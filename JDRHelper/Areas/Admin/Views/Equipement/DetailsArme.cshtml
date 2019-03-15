@@ -1,0 +1,87 @@
+﻿@model JDRHelper.Models.H_Equipement
+
+@{
+    ViewBag.Title = "DetailsArme";
+}
+
+<h2>DetailsArme</h2>
+
+<div>
+    <h4>H_Equipement</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Arme)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Arme.Nom)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Arme.Malus)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Arme.Malus)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Arme.TailleArme)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Arme.TailleArme)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Arme.Type)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Arme.Type.Nom)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Matiere)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Matiere.Nom)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Style)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Style.Nom)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Enchantement)
+        </dt>
+
+        @if (Model.Id_Enchantement != null)
+        {
+            <dd>
+                @Html.DisplayFor(model => model.Enchantement.Nom)
+            </dd>
+        }
+    </dl>
+</div>
+<div class="form-group">
+    @{
+        foreach (var item in Model.DetailsArme)
+        {
+            <p>
+                @item.Key: @item.Value;
+            </p>
+        }
+    }
+</div>
+
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) 
+    @Html.ActionLink("Back to List", "Index")
+</p>
