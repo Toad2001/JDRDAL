@@ -27,12 +27,12 @@
                     <li>@Html.ActionLink("Liste de Personnage", "Index", "PJ", new { area = "" }, null)</li>
                     @if (JDRHelper.Infrastructure.TheSession.CurrentUser == null)
                     {
-                        <li>@Html.ActionLink("Enregistre Toi !!!", "Register", "Utilisateur", new { area = "" }, null)</li>
+                        <li>@Html.ActionLink("Enregistre Toi", "Register", "Utilisateur", new { area = "" }, null)</li>
                         <li>
-                            <form action="@Url.Action("Connection","Connection","Utilisateur")" method="post">
+                            <form action="@Url.Action("Connection","Utilisateur")" method="post">
                                 <input type="text" name="Email" value="Email" />
                                 <input type="password" name="Password" value="Password" />
-                                <input type="submit" name="Connection" value="Connection" />
+                                <input type="submit" name="Go" value="Go" />
                             </form>
                         </li>
                     }

@@ -23,7 +23,7 @@ namespace JDRHelper.Controllers
         B_Role_UtilisateurService brs = new B_Role_UtilisateurService();
 
         #region Contact
-        //[CustomAuth("Admin,User")]
+        [CustomAuth("Admin","User")]
         [HttpGet]
         public ActionResult Contact()
         {
@@ -32,7 +32,7 @@ namespace JDRHelper.Controllers
             return View(new ContactViewModel());
         }
 
-        //[CustomAuth("Admin,User")]
+        [CustomAuth("Admin","User")]
         [HttpPost]
         public ActionResult Contact(ContactViewModel entity)
         {
@@ -50,14 +50,12 @@ namespace JDRHelper.Controllers
         #endregion
 
         #region Register
-        //[CustomAuth("Admin,User")]
         [HttpGet]
         public ActionResult Register()
         {
             return View(new H_Utilisateur());
         }
 
-        //[CustomAuth("Admin,User")]
         [HttpPost]
         public ActionResult Register(H_Utilisateur entity)
         {
@@ -71,24 +69,19 @@ namespace JDRHelper.Controllers
             role_Utilisateur.Id_Role = 2;
             role_Utilisateur.Id_Utilisateur = us.Insert(entity).Id;
 
-            brs.Insert(role_Utilisateur);
-
-            //H_Utilisateur user = us.Get(role_Utilisateur.Id_Utilisateur);
-            //string roles = user.Role;
+            brs.Insert(role_Utilisateur);           
 
             return RedirectToAction("Connection");
         }
         #endregion
 
         #region Connection
-        //[CustomAuth("Admin,User")]
         [HttpGet]
         public ActionResult Connection()
         {
             return View(new LoginViewModel());
         }
 
-        //[CustomAuth("Admin,User")]
         [HttpPost]
         public ActionResult Connection(LoginViewModel entity)
         {
@@ -116,7 +109,7 @@ namespace JDRHelper.Controllers
             }
         }
 
-        //[CustomAuth("Admin,User")]
+        [CustomAuth("Admin","User")]
         public ActionResult Logout()
         {
             Session.Abandon();
@@ -131,7 +124,6 @@ namespace JDRHelper.Controllers
         }
         #endregion
 
-        //[CustomAuth("Admin,User")]
         public static bool SendMail(ContactViewModel entity)
         {
             if (String.IsNullOrEmpty(entity.Message))

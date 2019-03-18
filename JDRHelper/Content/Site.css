@@ -7,8 +7,7 @@
     background-size: cover;
 }
 
-.a {
-    background-image: url(https://www.logolynx.com/images/logolynx/66/66fa31f7c070324d321aee7b2f0dd7c4.png);*/
+.jumbotron {
     margin: auto !important;
     padding: 0 !important;
     background-color: transparent !important;
@@ -18,8 +17,6 @@
 .body-content {
     padding-left: 15px;
     padding-right: 15px;
-        
-    
 }
 
 .dl-horizontal dt {
@@ -30,4 +27,8 @@ input,
 select,
 textarea {
     max-width: 280px;
+}
+
+.div > div{
+    background: rgb(255, 255, 255 , 0.3);
 }

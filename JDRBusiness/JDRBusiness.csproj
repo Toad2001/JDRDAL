@@ -61,7 +61,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
     <Compile Include="Mappers\B_Mapper.cs" />
     <Compile Include="Mappers\DetailsMapper.cs" />
     <Compile Include="Mappers\EquipementMapper.cs" />

@@ -4,257 +4,259 @@
     ViewBag.Title = "Details";
 }
 
+<div class="div">
+    <div class="form-group">
+        @{
+            <h3>@Model.Nom</h3>
 
-<div class="form-group">
-    @{
-        <table class="table">
-            <tr>
-                <th>
-                    Arme
-                </th>
-                <th>
-                    Matiere
-                </th>
-                <th>
-                    Style
-                </th>
-                <th>
-                    Enchantement
-                </th>
-                <th>
-                    Malus
-                </th>
-                <th>
-                    Taille
-                </th>
-                <th>
-                    Type
-                </th>
-                <th>
-                    Degats
-                </th>
-                <th>
-                    Encombrement
-                </th>
-                <th>
-                    Prix
-                </th>
+            <table class="table">
+                <tr>
+                    <th>
+                        Arme
+                    </th>
+                    <th>
+                        Matiere
+                    </th>
+                    <th>
+                        Style
+                    </th>
+                    <th>
+                        Enchantement
+                    </th>
+                    <th>
+                        Malus
+                    </th>
+                    <th>
+                        Taille
+                    </th>
+                    <th>
+                        Type
+                    </th>
+                    <th>
+                        Degats
+                    </th>
+                    <th>
+                        Encombrement
+                    </th>
+                    <th>
+                        Prix
+                    </th>
 
-                <th></th>
-            </tr>
+                    <th></th>
+                </tr>
 
-            @foreach (var item2 in Model.Equipement)
-            {
-                if (item2.Id_Arme != null)
+                @foreach (var item2 in Model.Equipement)
                 {
-                    <tr>
-                        <td>
-                            @Html.DisplayFor(modelItem => item2.Arme.Nom)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item2.Matiere.Nom)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item2.Style.Nom)
-                        </td>
-                        <td>
-                            @if (item2.Id_Enchantement != null)
-                            {@Html.DisplayFor(modelItem => item2.Enchantement.Nom)}
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item2.Arme.Malus)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item2.Arme.TailleArme)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item2.Arme.Type.Nom)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item2.DetailsArme["Dégats"])
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item2.DetailsArme["Encombrement"])
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item2.DetailsArme["Prix"])
-                        </td>
-                    </tr>
+                    if (item2.Id_Arme != null)
+                    {
+                        <tr>
+                            <td>
+                                @Html.DisplayFor(modelItem => item2.Arme.Nom)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item2.Matiere.Nom)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item2.Style.Nom)
+                            </td>
+                            <td>
+                                @if (item2.Id_Enchantement != null)
+                                {@Html.DisplayFor(modelItem => item2.Enchantement.Nom)}
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item2.Arme.Malus)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item2.Arme.TailleArme)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item2.Arme.Type.Nom)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item2.DetailsArme["Dégats"])
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item2.DetailsArme["Encombrement"])
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item2.DetailsArme["Prix"])
+                            </td>
+                        </tr>
+                    }
                 }
-            }
 
-        </table>
-        <table class="table">
-            <tr>
-                <th>
-                    Armure
-                </th>
-                <th>
-                    Matiere
-                </th>
-                <th>
-                    Style
-                </th>
-                <th>
-                    Enchantement
-                </th>
-                <th>
-                    Protection
-                </th>
-                <th>
-                    Encombrement
-                </th>
-                <th>
-                    Prix
-                </th>
+            </table>
+            <table class="table">
+                <tr>
+                    <th>
+                        Armure
+                    </th>
+                    <th>
+                        Matiere
+                    </th>
+                    <th>
+                        Style
+                    </th>
+                    <th>
+                        Enchantement
+                    </th>
+                    <th>
+                        Protection
+                    </th>
+                    <th>
+                        Encombrement
+                    </th>
+                    <th>
+                        Prix
+                    </th>
 
 
-                <th></th>
-            </tr>
+                    <th></th>
+                </tr>
 
-            @foreach (var item2 in Model.Equipement)
-            {
-                if (item2.Id_Armure != null)
+                @foreach (var item2 in Model.Equipement)
                 {
-                    <tr>
-                        <td>
-                            @Html.DisplayFor(modelItem => item2.Armure.Nom)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item2.Matiere.Nom)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item2.Style.Nom)
-                        </td>
-                        <td>
-                            @if (item2.Id_Enchantement != null)
-                            {@Html.DisplayFor(modelItem => item2.Enchantement.Nom)}
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item2.DetailsArmure["Défense"])
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item2.DetailsArmure["Encombrement"])
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item2.DetailsArmure["Prix"])
-                        </td>
-                    </tr>
+                    if (item2.Id_Armure != null)
+                    {
+                        <tr>
+                            <td>
+                                @Html.DisplayFor(modelItem => item2.Armure.Nom)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item2.Matiere.Nom)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item2.Style.Nom)
+                            </td>
+                            <td>
+                                @if (item2.Id_Enchantement != null)
+                                {@Html.DisplayFor(modelItem => item2.Enchantement.Nom)}
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item2.DetailsArmure["Défense"])
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item2.DetailsArmure["Encombrement"])
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item2.DetailsArmure["Prix"])
+                            </td>
+                        </tr>
+                    }
                 }
+            </table> }
+    </div>
+
+    <div id="gen">
+        <dl>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Perception)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Perception.ValeurStat)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Sexe)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.SexeNom)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Blesse)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Blesse)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Esquive)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Esquive)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.CoupPuissant)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.CoupPuissant)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Race)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Race.Nom)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Classe)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Classe.Nom)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Signe)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Signe.Nom)
+            </dd>
+
+            <dt>
+                Effet
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Signe.Effet)
+            </dd>
+
+        </dl>
+        <p>
+            @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+            @Html.ActionLink("Back to List", "Index")
+        </p>
+    </div>
+
+
+
+
+    <div class="form-group" id="lvl">
+        @{
+            foreach (var item in Model.DetailsPerso)
+            {
+                <p>
+                    @item.Key: @item.Value.Valeur; @Html.ActionLink("Edit", "Edit", "PJ_Stat", new { id = item.Value.Id }, new { })
+                </p>
             }
-        </table> }
-</div>
-
-<div id="gen">
-
-    <h3>@Model.Nom</h3>
-
-    <hr />
-    <dl >
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Perception)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Perception.ValeurStat)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Sexe)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.SexeNom)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Blesse)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Blesse)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Esquive)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Esquive)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.CoupPuissant)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.CoupPuissant)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Race)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Race.Nom)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Classe)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Classe.Nom)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Signe)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Signe.Nom)
-        </dd>
-
-        <dt>
-            Effet
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Signe.Effet)
-        </dd>
-
-    </dl>        
-    <p>
-        @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
-        @Html.ActionLink("Back to List", "Index")
-    </p>
-</div>
-
-
-
-
-<div class="form-group" id="lvl">
-    @{
-        foreach (var item in Model.DetailsPerso)
-        {
-            <p>
-                @item.Key: @item.Value.Valeur; @Html.ActionLink("Edit", "Edit", "PJ_Stat", new { id = item.Value.Id }, new { })
-            </p>
         }
-    }
+    </div>
+
+    <div class="form-group" id="carac">
+        @{
+            foreach (var item in Model.DetailsFull)
+            {
+                <p>
+                    @item.Key: @item.Value.Valeur; @Html.ActionLink("Edit", "Edit", "PJ_Stat", new { id = item.Value.Id }, new { })
+                </p>
+            }
+        }
+    </div>
+
 </div>
 
-<div class="form-group" id="carac">
-    @{
-        foreach (var item in Model.DetailsFull)
-        {
-            <p>
-                @item.Key: @item.Value.Valeur; @Html.ActionLink("Edit", "Edit", "PJ_Stat", new { id = item.Value.Id }, new { })
-            </p>
-        }
-    }
-</div>
+
 
 @section div {
     @Styles.Render("~/Content/PJ")
