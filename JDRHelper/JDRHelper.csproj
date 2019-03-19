@@ -147,7 +147,7 @@
     <Compile Include="Areas\Admin\Controllers\EquipementController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\PJController.cs" />
-    <Compile Include="Areas\Admin\Controllers\PJ_StatController.cs" />
+    <Compile Include="Controllers\PJ_StatController.cs" />
     <Compile Include="Areas\Admin\Controllers\RaceController.cs" />
     <Compile Include="Controllers\UtilisateurController.cs" />
     <Compile Include="Global.asax.cs">
@@ -306,8 +306,8 @@
     <Content Include="Views\Utilisateur\Contact.cshtml" />
     <Content Include="Views\PJ\Create.cshtml" />
     <Content Include="Views\PJ\Edit.cshtml" />
-    <Content Include="Areas\Admin\Views\PJ_Stat\Details.cshtml" />
-    <Content Include="Areas\Admin\Views\PJ_Stat\Edit.cshtml" />
+    <Content Include="Views\PJ_Stat\Details.cshtml" />
+    <Content Include="Views\PJ_Stat\Edit.cshtml" />
     <Content Include="Areas\Admin\Views\Race\Index.cshtml" />
     <Content Include="Areas\Admin\Views\Race\Details.cshtml" />
     <Content Include="Areas\Admin\Views\Equipement\DetailsArmure.cshtml" />

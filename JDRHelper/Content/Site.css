@@ -29,6 +29,6 @@ textarea {
     max-width: 280px;
 }
 
-.div > div{
-    background: rgb(255, 255, 255 , 0.3);
+.div > *{
+    background: rgb(255, 255, 255 , 0.3) !important;
 }

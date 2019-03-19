@@ -263,6 +263,7 @@ Exec AjouterObjetPJ 1,1
 insert into Roles values ('Admin'),('User'),('MJ'),('Joueur')
 
 Exec AjouterUtilisateur 'Bouillot','Alex','AlexBou','test1234','alexbouillot@hotmail.com'
+Exec AjouterUtilisateur 'Dhondt','Laurent','Lolo','mdp1234','lolo@gmail.com'
 
 insert into Role_Utilisateur values (1,1)
 insert into PJ_User (Id_PJ,Id_User) values (1,1)

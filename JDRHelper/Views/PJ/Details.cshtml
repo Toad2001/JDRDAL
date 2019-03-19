@@ -229,15 +229,12 @@
         </p>
     </div>
 
-
-
-
     <div class="form-group" id="lvl">
         @{
             foreach (var item in Model.DetailsPerso)
             {
                 <p>
-                    @item.Key: @item.Value.Valeur; @Html.ActionLink("Edit", "Edit", "PJ_Stat", new { id = item.Value.Id }, new { })
+                    @item.Key: @item.Value.Valeur; @Html.RouteLink("Edit", "Default", new { action ="Edit" , controller = "PJ_Stat" , id = item.Value.Id }, new { })
                 </p>
             }
         }
@@ -248,7 +245,7 @@
             foreach (var item in Model.DetailsFull)
             {
                 <p>
-                    @item.Key: @item.Value.Valeur; @Html.ActionLink("Edit", "Edit", "PJ_Stat", new { id = item.Value.Id }, new { })
+                    @item.Key: @item.Value.Valeur; @Html.RouteLink("Edit", "Default", new { action = "Edit", controller = "PJ_Stat", id = item.Value.Id }, new { })
                 </p>
             }
         }
