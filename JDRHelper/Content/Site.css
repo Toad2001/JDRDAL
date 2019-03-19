@@ -32,3 +32,23 @@ textarea {
 .div > *{
     background: rgb(255, 255, 255 , 0.3) !important;
 }
+
+.gauche {
+    float : left ;
+    width : 40%;
+}
+
+.droite {
+    float: right;
+    width: 40%;
+}
+
+.image {
+    width: inherit;
+    margin-right: 15px;
+    margin-left: 15px;
+    margin-bottom : 15px;
+    text-align: center;
+    display : block ; 
+    float : left;
+}
