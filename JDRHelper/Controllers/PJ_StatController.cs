@@ -9,16 +9,15 @@ using System.Web;
 using System.Web.Mvc;
 using ToolBox.MappeurGeneric;
 
-namespace JDRHelper.Areas.Admin.Controllers
+namespace JDRHelper.Controllers
 {
-    [CustomAuth("Admin")]
     public class PJ_StatController : Controller
     {
         private H_PJDetailsService pjDetSer = new H_PJDetailsService();
         private H_PJService pjSer = new H_PJService();
 
         // GET: PJ_Stat
-
+        [CustomAuth("Admin","User")]
         public ActionResult Details(int id)
         {
             H_PJ h_PJ = pjSer.Get(id);
@@ -27,6 +26,7 @@ namespace JDRHelper.Areas.Admin.Controllers
             return View(h_PJ.Details);
         }
 
+        [CustomAuth("Admin")]
         [HttpPost]
         public ActionResult Edit(H_PJDetails item)
         {
@@ -35,6 +35,7 @@ namespace JDRHelper.Areas.Admin.Controllers
             return RedirectToAction("Details", "PJ" , new { h_PJ.Id });
         }
 
+        [CustomAuth("Admin")]
         [HttpGet]
         public ActionResult Edit(int id)
         {

@@ -1,35 +1,37 @@
 ﻿@{
     ViewBag.Title = "Home Page";
 }
+<div class="div">
+    <div class="jumbotron">
+        <h1>JDRHelper site Web/ASP.NET</h1>
+        <p class="lead">
+            Notre projet est une aide pour un jeu de rôle sur le thème de The Elder Scrolls (univers fantastique
+            médiéval) que l’un de nous a créé.
+            Notre but est de permettre aux participants du jeu de rôle d’avoir facilement accès aux
+            caractéristiques des personnages, ainsi que de laisser la possibilité au MJ (maître du jeu) de
+            modifier les personnages existants, afin de remplacer les fiches en papier des personnages.
+            Nous étions d’abord partis pour en faire un programme en ADO, mais nous avons finalement fait une
+            application en ASP.net pour pouvoir peut-être le publier un jour.
+        </p>
+        <p>Notre application est encore au stade de développement </p>
+    </div>
 
-<div class="jumbotron">
-    <h1>JDRHelper site Web/ASP.NET</h1>
-    <p class="lead">
-        Notre projet est une aide pour un jeu de rôle sur le thème de The Elder Scrolls (univers fantastique
-        médiéval) que l’un de nous a créé.
-        Notre but est de permettre aux participants du jeu de rôle d’avoir facilement accès aux
-        caractéristiques des personnages, ainsi que de laisser la possibilité au MJ (maître du jeu) de
-        modifier les personnages existants, afin de remplacer les fiches en papier des personnages.
-        Nous étions d’abord partis pour en faire un programme en ADO, mais nous avons finalement fait une
-        application en ASP.net pour pouvoir peut-être le publier un jour.
-    </p>
-    <p>Notre application est encore au stade de développement </p>
+    <div class="row">
+        <div class="col-md-4">
+            <h2>Pour bien commencer</h2>
+            <p>Première étape enregistrez vous ! Pour avoir accès a toutes nos fonctionnalitées vous devez être connecté pour obtenir le role "Utilisateur"</p>
+            @*<p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>*@
+        </div>
+        <div class="col-md-4">
+            <h2>Créer un personnage</h2>
+            <p>Cliquer sur l'onglet "Liste de Personnage" vous y trouverez la liste de vos personnages ainsi que le bouton "Nouveau Personnage" cliqué dessus et ensuite crée votre personnage</p>
+            <p>@Html.ActionLink("Liste de Personnage", "Index", "PJ")</p>
+        </div>
+        <div class="col-md-4">
+            <h2>Web Hosting</h2>
+            <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
+            @*<p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>*@
+        </div>
+    </div>
 </div>
 
-<div class="row">
-    <div class="col-md-4">
-        <h2>Pour bien commencer</h2>
-        <p>Première étape enregistrez vous ! Pour avoir accès a toutes nos fonctionnalitées vous devez être connecté pour obtenir le role "Utilisateur"</p>
-        @*<p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>*@
-    </div>
-    <div class="col-md-4">
-        <h2>Créer un personnage</h2>
-        <p>Cliquer sur l'onglet "Liste de Personnage" vous y trouverez la liste de vos personnages ainsi que le bouton "Nouveau Personnage" cliqué dessus et ensuite crée votre personnage</p>
-        <p>@Html.ActionLink("Liste de Personnage", "Index", "PJ")</p>
-    </div>
-    <div class="col-md-4">
-        <h2>Web Hosting</h2>
-        <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
-        @*<p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>*@
-    </div>
-</div>

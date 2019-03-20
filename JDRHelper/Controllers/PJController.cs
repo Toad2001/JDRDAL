@@ -137,6 +137,11 @@ namespace JDRHelper.Controllers
         [HttpPost]
         public ActionResult Edit(H_PJ item)
         {
+            H_PJ reserve = pjService.Get(item.Id);
+            item.Sexe = reserve.Sexe;
+            item.Id_Race = reserve.Id_Race;
+            item.Id_Classe = reserve.Id_Classe;
+            item.Id_Signe = reserve.Id_Signe;
             bool temp = pjService.Update(item.Id, item);
 
 

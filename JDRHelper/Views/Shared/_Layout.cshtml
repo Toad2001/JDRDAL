@@ -29,7 +29,7 @@
                     {
                         <li>@Html.ActionLink("Enregistre toi", "Register", "Utilisateur", new { area = "" }, null)</li>
                         <li>
-                            <form action="@Url.Action("Connection","Utilisateur")" method="post">
+                            <form action="@Url.Action("Connexion","Utilisateur")" method="post">
                                 <input type="text" name="Email" placeholder="Email" class="ajout" />
                                 <input type="password" name="Password" placeholder="Password" class="ajout" id="mdp" />
                                 <input type="submit" name="Go" value="Go" class="ajout" />
@@ -38,7 +38,7 @@
                     }
                     @if (JDRHelper.Infrastructure.TheSession.CurrentUser != null)
                     {
-                        <li>@Html.ActionLink("Déconnection", "Logout", "Utilisateur", new { area = "" }, null)</li>
+                        <li>@Html.ActionLink("Déconnexion", "Logout", "Utilisateur", new { area = "" }, null)</li>
                     }
                     @if (JDRHelper.Infrastructure.TheSession.CurrentUser != null && JDRHelper.Infrastructure.TheSession.CurrentUser.Role == "Admin")
                     {
@@ -46,15 +46,10 @@
                     }
                 </ul>
             </div>
-
         </div>
     </div>
     <div class="container body-content">
         @RenderBody()
-
-        <footer>
-            <p>&copy; @DateTime.Now.Year - JDRHelper Application</p>
-        </footer>
     </div>
 
     @Scripts.Render("~/bundles/jquery")
@@ -64,7 +59,5 @@
 
     @RenderSection("scripts", required: false)
     @RenderSection("div", required: false)
-
-
 </body>
 </html>
