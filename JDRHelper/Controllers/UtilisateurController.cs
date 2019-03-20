@@ -10,6 +10,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Net;
 using System.Net.Mail;
+using System.Security.Cryptography;
 using System.Text;
 using System.Web;
 using System.Web.Mvc;
@@ -66,6 +67,7 @@ namespace JDRHelper.Controllers
 
             B_Role_Utilisateur role_Utilisateur = new B_Role_Utilisateur();
 
+            entity.Password = HashPassword(entity.Password);
             role_Utilisateur.Id_Role = 2;
             role_Utilisateur.Id_Utilisateur = us.Insert(entity).Id;
 
@@ -91,7 +93,7 @@ namespace JDRHelper.Controllers
             }
             //getall des tes users avec linq pour ne prendre que celui qui a l'email en param            
 
-            H_Utilisateur utilisateur = us.Get().Where(u => u.Email == entity.Email && u.Password == entity.Password).FirstOrDefault();
+            H_Utilisateur utilisateur = us.Get().Where(u => u.Email == entity.Email && u.Password == HashPassword(entity.Password)).FirstOrDefault();
             // verif si null ou pas.
             if (utilisateur != null)
             {
@@ -156,5 +158,18 @@ namespace JDRHelper.Controllers
                 throw new Exception("L'envoi de mail ne c'est pas passsé comme prévu...");
             }
         }
+
+        public static string HashPassword(string pw)
+        {
+            byte[] data = Encoding.UTF8.GetBytes(pw);
+            byte[] hash;
+            using (SHA512 shaM = new SHA512Managed())
+            {
+                hash = shaM.ComputeHash(data);
+            }
+            string test = Encoding.Unicode.GetString(hash);
+            return test;
+        }
     }
+
 }

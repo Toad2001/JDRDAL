@@ -262,8 +262,10 @@ Exec AjouterObjetPJ 1,1
 
 insert into Roles values ('Admin'),('User'),('MJ'),('Joueur')
 
-Exec AjouterUtilisateur 'Bouillot','Alex','AlexBou','test1234','alexbouillot@hotmail.com'
-Exec AjouterUtilisateur 'Dhondt','Laurent','Lolo','mdp1234','lolo@gmail.com'
+--Exec AjouterUtilisateur 'Bouillot','Alex','AlexBou','븫䠌᪹᭽枊ꡓ쮹�렖祃麟戕萒竟燍뻩ູᒦ뷇䊒꩐䒞虪╧藦嶦퇵ꔹᣍ줍','alexbouillot@hotmail.com' 
+--mdp = test1234
+--Exec AjouterUtilisateur 'Dhondt','Laurent','Lolo','䳁캻꾮듽皛槒檋혡﮴㫋ᘩ唌冕慂傖撼錘ߠ頠뫓‥섾맡ｪ얒恠᲎А','lolo@gmail.com'
+--mdp = mdp1234
 
-insert into Role_Utilisateur values (1,1)
-insert into PJ_User (Id_PJ,Id_User) values (1,1)
+--insert into Role_Utilisateur values (1,1)
+--insert into PJ_User (Id_PJ,Id_User) values (1,1)

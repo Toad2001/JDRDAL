@@ -29,7 +29,7 @@
                     {
                         <li>@Html.ActionLink("Enregistre Toi", "Register", "Utilisateur", new { area = "" }, null)</li>
                         <li>
-                            <form action="@Url.Action("Connection","Utilisateur")" method="post">
+                            <form action="@Url.Action("Connexion","Utilisateur")" method="post">
                                 <input type="text" name="Email" value="Email" />
                                 <input type="password" name="Password" value="Password" />
                                 <input type="submit" name="Go" value="Go" />
@@ -38,7 +38,7 @@
                     }
                     @if (JDRHelper.Infrastructure.TheSession.CurrentUser != null)
                     {
-                        <li>@Html.ActionLink("Déconnection", "Logout", "Utilisateur", new { area = "" }, null)</li>
+                        <li>@Html.ActionLink("Déconnexion", "Logout", "Utilisateur", new { area = "" }, null)</li>
                     }
                     @if (JDRHelper.Infrastructure.TheSession.CurrentUser != null && JDRHelper.Infrastructure.TheSession.CurrentUser.Role == "Admin")
                     {
