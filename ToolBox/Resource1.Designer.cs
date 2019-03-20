@@ -70,7 +70,7 @@ namespace ToolBox {
         }
         
         /// <summary>
-        ///   Recherche une chaîne localisée semblable à Data Source=TECHNOBEL\TECHNOBELSQL2014; Initial Catalog=JDRDB; User ID=sa;Password=test1234=;.
+        ///   Recherche une chaîne localisée semblable à Data Source=TECHNOBEL\TECHNOBELSQL2014; Initial Catalog=JDRDB; User ID=sa;Password=Test1234=;.
         /// </summary>
         internal static string ConnectionString {
             get {
